@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goldstein Apartment Greybox</title>
+  <style>
+    :root {
+      --bg: #1b1a18; --panel: #24221f; --line: #3a3631; --text: #e7e1d6; --muted: #a39b8e;
+      --accent: #c9a96a; --ok: #5f9e6e; --prov: #d8b04a; --limit: #d9822b; --mixed: #7fa7c9;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+      font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden; }
+    #app { position: fixed; inset: 0 0 0 280px; z-index: 1; }
+    #app canvas { display: block; }
+    #panel { position: fixed; top: 0; left: 0; bottom: 0; width: 280px; background: var(--panel);
+      border-right: 1px solid var(--line); padding: 14px 14px 20px; overflow-y: auto; }
+    h1 { font-size: 14px; margin: 0 0 2px; letter-spacing: .02em; }
+    .sub { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+    h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+      margin: 16px 0 6px; font-weight: 600; }
+    .seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+    button { background: #2e2b27; color: var(--text); border: 1px solid var(--line); border-radius: 6px;
+      padding: 6px 4px; font: inherit; cursor: pointer; }
+    button:hover { border-color: #5a5248; }
+    button.on { background: #3a342b; border-color: var(--accent); color: #fff; }
+    label.row { display: flex; align-items: center; gap: 8px; padding: 3px 0; cursor: pointer; }
+    select, input[type=range] { width: 100%; }
+    select { background: #2e2b27; color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 5px; font: inherit; }
+    .legend span { display: inline-flex; align-items: center; gap: 5px; margin: 2px 10px 2px 0; font-size: 12px; }
+    .legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+    #info { background: #1f1d1a; border: 1px solid var(--line); border-radius: 6px; padding: 8px; min-height: 60px;
+      font-size: 12px; white-space: pre-wrap; color: var(--muted); }
+    #info b { color: var(--text); }
+    .hint { color: var(--muted); font-size: 12px; }
+    #status { position: fixed; right: 12px; bottom: 10px; color: var(--muted); font-size: 12px; pointer-events: none; }
+    #overlay { position: fixed; pointer-events: none; display: none; z-index: 0; }
+    .dim-label { background: rgba(20,19,17,.85); color: var(--text); border-left: 3px solid; padding: 2px 6px;
+      font-size: 11px; border-radius: 3px; white-space: nowrap; }
+    #refnote { font-size: 12px; color: var(--muted); margin-top: 6px; }
+    #VRButton, button.vr { position: static !important; }
+  </style>
+</head>
+<body>
+  <aside id="panel">
+    <h1>Goldstein apartment</h1>
+    <div class="sub">Phase 2 · architectural greybox · private</div>
+
+    <h2>View</h2>
+    <div class="seg" id="modes">
+      <button data-mode="orbit" class="on" title="O">Orbit</button>
+      <button data-mode="walk" title="W">Walk</button>
+      <button data-mode="plan" title="P">Plan</button>
+      <button data-mode="ref" title="R">Ref cam</button>
+    </div>
+    <div class="hint" id="modehint">Drag to orbit, scroll to zoom.</div>
+
+    <h2>Reference camera</h2>
+    <select id="refsel"></select>
+    <label class="row">Photo <input type="range" id="refop" min="0" max="1" step="0.05" value="0.5" /></label>
+    <label class="row"><input type="checkbox" id="edges" /> Draw architecture as lines</label>
+    <div id="refnote"></div>
+
+    <h2>Show</h2>
+    <label class="row"><input type="checkbox" id="t-ceil" checked /> Ceilings</label>
+    <label class="row"><input type="checkbox" id="t-walls" checked /> Walls</label>
+    <label class="row"><input type="checkbox" id="t-dims" checked /> Dimensions</label>
+    <label class="row"><input type="checkbox" id="t-evid" /> Colour by evidence</label>
+    <label class="row"><input type="checkbox" id="t-foot" checked /> Furniture footprints</label>
+    <label class="row"><input type="checkbox" id="t-limit" checked /> Evidence limits</label>
+    <label class="row"><input type="checkbox" id="t-coll" /> Collision boxes</label>
+    <div class="legend">
+      <span><i style="background:var(--ok)"></i>derived</span>
+      <span><i style="background:var(--mixed)"></i>derived pos, prov. size</span>
+      <span><i style="background:var(--prov)"></i>provisional</span>
+      <span><i style="background:var(--limit)"></i>evidence limit</span>
+    </div>
+
+    <h2>Photographic layer</h2>
+    <select id="photomode"><option value="photo">Photographic (R01 projected)</option><option value="procedural">Procedural only (Phase 3)</option><option value="coverage">Coverage map (green = photo, red = fill)</option></select>
+    <label class="row">Photo blend <input type="range" id="photomix" min="0" max="1" step="0.05" value="1" /></label>
+    <div class="hint">The only calibrated source is R01. Surfaces it cannot see keep the procedural fill.</div>
+
+    <h2>Interior (Phase 3)</h2>
+    <label class="row"><input type="checkbox" id="t-furn" checked /> Furniture &amp; objects</label>
+    <label class="row"><input type="checkbox" id="t-fin" checked /> Finishes (paper, wood, floor)</label>
+    <label class="row"><input type="checkbox" id="t-sc41" /> Script props (provisional)</label>
+    <label class="row"><input type="checkbox" id="t-fcoll" checked /> Furniture collision (walk)</label>
+    <label class="row"><input type="checkbox" id="t-fcolv" /> Show furniture collision boxes</label>
+    <label class="row"><input type="checkbox" id="t-conf" /> Placement confidence colours</label>
+    <div class="legend"><span><i style="background:var(--ok)"></i>position verified</span><span><i style="background:var(--prov)"></i>provisional</span></div>
+    <select id="lightmode"><option value="neutral">Neutral inspection light</option><option value="fire">Warm fire test (materials only)</option></select>
+
+    <h2>Pocket doors</h2>
+    <select id="doors">
+      <option value="r01">As in R01</option>
+      <option value="open">Fully open</option>
+      <option value="closed">Closed</option>
+    </select>
+
+    <h2>Measure</h2>
+    <label class="row"><input type="checkbox" id="tape" /> Tape: click two surfaces</label>
+    <button id="tapeclear">Clear measurements</button>
+
+    <h2>Export</h2>
+    <button id="export">Architecture as .glb</button>
+
+    <h2>Selected</h2>
+    <div id="info">Click any surface to see what it is, its status and its evidence.</div>
+
+    <h2>VR</h2>
+    <div id="vrslot" class="hint">Needs a WebXR headset (Quest browser) on HTTPS. Left stick: slide · right stick: snap turn (inspection only).</div>
+  </aside>
+  <div id="app"></div>
+  <img id="overlay" alt="" />
+  <div id="status"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

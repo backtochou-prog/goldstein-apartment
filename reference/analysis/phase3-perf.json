@@ -1,0 +1,96 @@
+{
+ "triangles": 51861,
+ "meshes": 70,
+ "materials": 32,
+ "textureMB": 23.020285156249997,
+ "textures": [
+  {
+   "src": "wood_dark.png",
+   "w": 512,
+   "h": 512
+  },
+  {
+   "src": "wood_mid.png",
+   "w": 512,
+   "h": 512
+  },
+  {
+   "src": "wood_oak.png",
+   "w": 512,
+   "h": 512
+  },
+  {
+   "src": "velvet.png",
+   "w": 256,
+   "h": 256
+  },
+  {
+   "src": "cane.png",
+   "w": 256,
+   "h": 256
+  },
+  {
+   "src": "linen.png",
+   "w": 256,
+   "h": 256
+  },
+  {
+   "src": "tapestry.png",
+   "w": 256,
+   "h": 256
+  },
+  {
+   "src": "shawl.png",
+   "w": 256,
+   "h": 256
+  },
+  {
+   "src": "coverlet_pink.png",
+   "w": 512,
+   "h": 512
+  },
+  {
+   "src": "curtain_floral.png",
+   "w": 512,
+   "h": 512
+  },
+  {
+   "src": "drape_outer.png",
+   "w": 256,
+   "h": 256
+  },
+  {
+   "src": "rug_pink.png",
+   "w": 1024,
+   "h": 1024
+  },
+  {
+   "src": "rug_oriental.png",
+   "w": 1024,
+   "h": 792
+  },
+  {
+   "src": "wallpaper_main.png",
+   "w": 512,
+   "h": 730
+  },
+  {
+   "src": "wallpaper_back.png",
+   "w": 256,
+   "h": 256
+  },
+  {
+   "src": "floorboards.png",
+   "w": 512,
+   "h": 1024
+  }
+ ],
+ "renderer": {
+  "geometries": 102,
+  "textures": 18
+ },
+ "interiorBuildMs": 682.1000001430511,
+ "textureLoadMs": 3388.5999999046326,
+ "interiorTriangles": 53068,
+ "interiorDraws": 24
+}

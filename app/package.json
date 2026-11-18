@@ -1,0 +1,33 @@
+{
+  "name": "goldstein-apartment-greybox",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Phase 2 architectural greybox of the Goldstein apartment (private, never deploy).",
+  "scripts": {
+    "dev": "vite",
+    "dev:lan": "vite --host --mode lan",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dims": "node tools/print-dimensions.mjs",
+    "check": "node tools/check-spec.mjs",
+    "test:browser": "node tools/browser-test.mjs",
+    "verify": "npm run check && npm run check:objects && npm run build && npm run test:browser && npm run test:interior && npm run test:photo && npm run test:xr",
+    "test:xr": "node tools/xr-test.mjs",
+    "check:objects": "node tools/check-objects.mjs",
+    "textures": "python3 -I tools/make-textures.py",
+    "test:interior": "node tools/interior-test.mjs",
+    "compare": "node tools/compare-r01.mjs",
+    "bboxes": "node tools/bbox-report.mjs",
+    "manifest": "node tools/export-manifest.mjs",
+    "docs": "node tools/gen-docs.mjs",
+    "test:photo": "node tools/photo-test.mjs"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "1.1.0",
+    "vite": "5.4.11"
+  }
+}

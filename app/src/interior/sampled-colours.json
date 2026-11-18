@@ -1,0 +1,457 @@
+{
+ "wallpaper_main_right": {
+  "image": "R01",
+  "box": [
+   1620,
+   60,
+   1790,
+   330
+  ],
+  "what": "main-room damask, right wall, brightest frontal part",
+  "median": "#846a51",
+  "p15": "#6a503a",
+  "p85": "#997f66"
+ },
+ "wallpaper_main_pier": {
+  "image": "R01",
+  "box": [
+   1320,
+   330,
+   1430,
+   560
+  ],
+  "what": "main-room damask, right pier",
+  "median": "#79593c",
+  "p15": "#614228",
+  "p85": "#906e4e"
+ },
+ "wallpaper_main_left": {
+  "image": "R01",
+  "box": [
+   400,
+   40,
+   520,
+   260
+  ],
+  "what": "main-room damask, left pier",
+  "median": "#ae8c6d",
+  "p15": "#926e51",
+  "p85": "#c7a686"
+ },
+ "wallpaper_back": {
+  "image": "R01",
+  "box": [
+   895,
+   220,
+   935,
+   420
+  ],
+  "what": "back-room sprig paper between the windows",
+  "median": "#eeebdc",
+  "p15": "#e8e5d1",
+  "p85": "#f1eee2"
+ },
+ "wallpaper_bedroom_R05": {
+  "image": "R05",
+  "box": [
+   230,
+   40,
+   330,
+   200
+  ],
+  "what": "SC45 bedroom wall paper (film frame)",
+  "median": "#181712",
+  "p15": "#0c0b06",
+  "p85": "#24221d"
+ },
+ "floorboards": {
+  "image": "R01",
+  "box": [
+   1165,
+   850,
+   1310,
+   1010
+  ],
+  "what": "main-room floorboards",
+  "median": "#4c2e1c",
+  "p15": "#381e10",
+  "p85": "#b57c55"
+ },
+ "door_wood": {
+  "image": "R01",
+  "box": [
+   590,
+   280,
+   650,
+   400
+  ],
+  "what": "pocket-door leaf, dark stained wood",
+  "median": "#40210f",
+  "p15": "#321909",
+  "p85": "#4b2b1a"
+ },
+ "chair_oak": {
+  "image": "R01",
+  "box": [
+   868,
+   655,
+   985,
+   700
+  ],
+  "what": "pressed-back chair crest",
+  "median": "#642e11",
+  "p15": "#54240a",
+  "p85": "#783e1e"
+ },
+ "table_top": {
+  "image": "R01",
+  "box": [
+   790,
+   660,
+   940,
+   700
+  ],
+  "what": "dining table top",
+  "median": "#662f12",
+  "p15": "#4f2209",
+  "p85": "#b09680"
+ },
+ "cabinet_wood": {
+  "image": "R01",
+  "box": [
+   230,
+   580,
+   340,
+   680
+  ],
+  "what": "mirror cabinet lower body",
+  "median": "#744618",
+  "p15": "#321b08",
+  "p85": "#906530"
+ },
+ "cabinet_backboard": {
+  "image": "R01",
+  "box": [
+   180,
+   160,
+   250,
+   215
+  ],
+  "what": "mirror cabinet crest panel",
+  "median": "#8b4e1d",
+  "p15": "#5a2c0c",
+  "p85": "#9d5e2c"
+ },
+ "trefoil_top": {
+  "image": "R01",
+  "box": [
+   200,
+   915,
+   330,
+   935
+  ],
+  "what": "trefoil table top",
+  "median": "#874c1c",
+  "p15": "#503912",
+  "p85": "#985e3d"
+ },
+ "sink_cabinet": {
+  "image": "R01",
+  "box": [
+   1650,
+   850,
+   1780,
+   1000
+  ],
+  "what": "sink cabinet end",
+  "median": "#1c0703",
+  "p15": "#170402",
+  "p85": "#230b05"
+ },
+ "sink_ceramic": {
+  "image": "R01",
+  "box": [
+   1530,
+   760,
+   1620,
+   800
+  ],
+  "what": "sink interior glaze",
+  "median": "#be8e55",
+  "p15": "#b07d38",
+  "p85": "#cb9f6a"
+ },
+ "splashback_ceramic": {
+  "image": "R01",
+  "box": [
+   1710,
+   610,
+   1790,
+   660
+  ],
+  "what": "ceramic splashback panel",
+  "median": "#cab58a",
+  "p15": "#7f6233",
+  "p85": "#d6c49b"
+ },
+ "range_iron": {
+  "image": "R01",
+  "box": [
+   1370,
+   760,
+   1440,
+   820
+  ],
+  "what": "cast-iron range",
+  "median": "#0f0a06",
+  "p15": "#0a0603",
+  "p85": "#18110b"
+ },
+ "velvet_seat": {
+  "image": "R01",
+  "box": [
+   560,
+   1010,
+   700,
+   1070
+  ],
+  "what": "armchair seat velvet",
+  "median": "#7c7b6a",
+  "p15": "#6f6d54",
+  "p85": "#8e8a78"
+ },
+ "velvet_back": {
+  "image": "R01",
+  "box": [
+   590,
+   790,
+   640,
+   850
+  ],
+  "what": "armchair back velvet",
+  "median": "#4d3922",
+  "p15": "#230f06",
+  "p85": "#a36c50"
+ },
+ "cushion_ruched": {
+  "image": "R01",
+  "box": [
+   420,
+   870,
+   520,
+   930
+  ],
+  "what": "silver-grey ruched cushion",
+  "median": "#bcc4ad",
+  "p15": "#89947b",
+  "p85": "#d9dec9"
+ },
+ "rug_pink": {
+  "image": "R01",
+  "box": [
+   900,
+   1010,
+   1050,
+   1050
+  ],
+  "what": "pink floral rug field",
+  "median": "#d5b9a4",
+  "p15": "#b38b65",
+  "p85": "#e3c9bd"
+ },
+ "rug_oriental": {
+  "image": "R01",
+  "box": [
+   1000,
+   1160,
+   1400,
+   1230
+  ],
+  "what": "oriental rug (mixed field)",
+  "median": "#92623c",
+  "p15": "#51301a",
+  "p85": "#b7885e"
+ },
+ "curtain_outer": {
+  "image": "R01",
+  "box": [
+   680,
+   250,
+   720,
+   480
+  ],
+  "what": "back room outer drape",
+  "median": "#302f24",
+  "p15": "#171610",
+  "p85": "#a48e6c"
+ },
+ "curtain_inner": {
+  "image": "R01",
+  "box": [
+   905,
+   260,
+   930,
+   420
+  ],
+  "what": "back room inner floral drape",
+  "median": "#efecdf",
+  "p15": "#edeada",
+  "p85": "#f1efe3"
+ },
+ "bed_pink": {
+  "image": "R01",
+  "box": [
+   1020,
+   560,
+   1090,
+   600
+  ],
+  "what": "right bed pink coverlet",
+  "median": "#e8ad8c",
+  "p15": "#d48b6b",
+  "p85": "#fde3d1"
+ },
+ "bed_white": {
+  "image": "R01",
+  "box": [
+   700,
+   540,
+   800,
+   580
+  ],
+  "what": "left bed white spread",
+  "median": "#d9d1ba",
+  "p15": "#baaa7f",
+  "p85": "#f2efeb"
+ },
+ "bed_wood": {
+  "image": "R01",
+  "box": [
+   730,
+   505,
+   800,
+   520
+  ],
+  "what": "bed headboard wood",
+  "median": "#2f1a14",
+  "p15": "#110504",
+  "p85": "#4f281f"
+ },
+ "shade_peach": {
+  "image": "R01",
+  "box": [
+   110,
+   330,
+   180,
+   372
+  ],
+  "what": "sconce tulip shade",
+  "median": "#d09b63",
+  "p15": "#b77d41",
+  "p85": "#e5bf8d"
+ },
+ "shade_domed": {
+  "image": "R01",
+  "box": [
+   140,
+   690,
+   260,
+   730
+  ],
+  "what": "domed painted-glass lamp shade",
+  "median": "#b2b29f",
+  "p15": "#8b8e7b",
+  "p85": "#dbe1d1"
+ },
+ "shelf_wood": {
+  "image": "R01",
+  "box": [
+   1560,
+   436,
+   1700,
+   448
+  ],
+  "what": "kitchen shelf",
+  "median": "#5b3e22",
+  "p15": "#201408",
+  "p85": "#83644b"
+ },
+ "brass_tap": {
+  "image": "R01",
+  "box": [
+   1695,
+   640,
+   1725,
+   670
+  ],
+  "what": "tap brass",
+  "median": "#826037",
+  "p15": "#4d2d0d",
+  "p85": "#cfb98b"
+ },
+ "curtain_R05": {
+  "image": "R05",
+  "box": [
+   190,
+   40,
+   250,
+   330
+  ],
+  "what": "SC45 curtain, blue-grey with gold",
+  "median": "#1e1c17",
+  "p15": "#16140c",
+  "p85": "#2f2e2e"
+ },
+ "coverlet_R05": {
+  "image": "R05",
+  "box": [
+   330,
+   360,
+   560,
+   420
+  ],
+  "what": "SC45 bed pink coverlet",
+  "median": "#6c544b",
+  "p15": "#453225",
+  "p85": "#8f706a"
+ },
+ "fireplace_black": {
+  "image": "R02",
+  "box": [
+   900,
+   760,
+   1150,
+   900
+  ],
+  "what": "fireplace surround",
+  "median": "#181411",
+  "p15": "#0b0a0a",
+  "p85": "#28231a"
+ },
+ "wall_R02": {
+  "image": "R02",
+  "box": [
+   240,
+   150,
+   330,
+   500
+  ],
+  "what": "wall paper near fireplace (film still)",
+  "median": "#866e4c",
+  "p15": "#382a17",
+  "p85": "#b4a384"
+ },
+ "lampshade_R02": {
+  "image": "R02",
+  "box": [
+   720,
+   300,
+   900,
+   380
+  ],
+  "what": "fringed lamp shade lit",
+  "median": "#fae6c9",
+  "p15": "#8a6842",
+  "p85": "#fefbf0"
+ }
+}

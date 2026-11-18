@@ -1,0 +1,24 @@
+# Film-derived and third-party media stays private and out of version control.
+reference/frames/
+reference/stills/
+reference/scans/
+reference/sheets/
+reference/web-cache/
+reference/analysis/**/*.png
+reference/analysis/**/*.jpg
+assets/textures/
+audio/masters/
+audio/user-supplied/
+*.mkv
+*.mp4
+*.mov
+*.m4v
+*.wav
+*.flac
+*.mp3
+__pycache__/
+*.tmp
+# Phase 2 app build products
+app/node_modules/
+app/dist/
+app/exports/

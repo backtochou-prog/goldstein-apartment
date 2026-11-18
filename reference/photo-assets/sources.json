@@ -1,0 +1,21 @@
+{
+  "schema": "goldstein.photo-sources.v1",
+  "organisation": "reference/photo-assets/<room|windows|objects>/<camera>/ ; images themselves stay in reference/stills|frames (private, git-ignored) and are referenced by catalogue id, never copied or edited",
+  "integrity": "Only lawfully obtained images. No generated image is ever registered as film material. A source is usable ONLY with a solved camera.",
+  "sources": [
+    {
+      "id": "R01", "catalogue": "F00001", "file": "reference/stills/SET/F00001_WW-FACTFILE_hp_apt1.png",
+      "kind": "official studio set photograph (tier T3), NOT a film frame",
+      "origin": "https://www.harrypotter.com/fact-file/locations/tina-and-queenies-apartment",
+      "resolution": [1800, 1248], "rooms": ["main", "back"], "windows": ["window1", "window2"],
+      "camera": {"status": "SOLVED", "solve": "app/src/spec/r01-solve.js", "positionWorldM": [2.58, 1.60, 5.58], "focalPx": 1350, "principalPointPx": [1000, 420]},
+      "usedFor": ["main-room walls (both sides + pocket-door piers)", "pocket doors and casing", "floor and rugs", "left-wall furniture fronts", "kitchen run", "dining group", "back-room window wall, drapes, beds"],
+      "unusable": ["anything R01 cannot see: fourth wall, ceilings, sisters' room, backs and sides of furniture, floor nearer than z 2.97 m"]
+    },
+    {"id": "R02", "catalogue": "F00002", "camera": {"status": "UNSOLVED"}, "note": "film still 1800x1248 of Queenie at the fireplace; needs a camera solve before it may be projected"},
+    {"id": "R03", "catalogue": "F00003", "camera": {"status": "UNSOLVED"}, "note": "1050x700"},
+    {"id": "R04", "catalogue": "F00004", "camera": {"status": "UNSOLVED"}, "note": "1050x433 film frame, doorway view"},
+    {"id": "R05", "catalogue": "F00005", "camera": {"status": "UNSOLVED"}, "note": "1050x440 film frame, SC45 bedroom"}
+  ],
+  "needed": "Your own screenshots of the film (lawfully obtained copy) from several angles of the main room and back room, then one camera solve each."
+}
